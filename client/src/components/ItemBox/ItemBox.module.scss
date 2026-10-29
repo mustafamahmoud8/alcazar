@@ -1,0 +1,84 @@
+@import "../../styles/variable.scss";
+
+.item {
+    border-radius: 12px !important;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: $box_shadow;
+    transition: $transition;
+    cursor: default;
+
+    &:hover {
+        box-shadow: rgba(89, 20, 38, 0.2) 0 8px 24px, rgba(0, 0, 0, 0.15) 0 2px 8px;
+        transform: translateY(-4px);
+    }
+
+    // Image Wrapper
+    .item_image_wrapper {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .item_image {
+                transform: scale(1.07);
+            }
+            .item_image_overlay {
+                opacity: 1;
+            }
+        }
+    }
+
+    // Image overlay on hover
+    .item_image_overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(89, 20, 38, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: $transition;
+    }
+
+    // Loading skeletons
+    .item_image_load {
+        height: 220px;
+    }
+    .item_price_load {
+        width: 40%;
+    }
+    .item_name_load {
+        width: 60%;
+    }
+    .item_delete_btn_load {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+    }
+    .item_edit_btn_load {
+        width: 30%;
+        height: 30px;
+        border-radius: 4px;
+    }
+    .item_view_btn_load {
+        width: 50%;
+        height: 30px;
+        border-radius: 4px;
+    }
+
+    // Main image
+    .item_image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 220px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    // Price styling
+    .item_price {
+        color: $main;
+        font-weight: 700 !important;
+    }
+}
+

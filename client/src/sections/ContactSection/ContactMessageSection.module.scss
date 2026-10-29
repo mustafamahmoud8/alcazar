@@ -1,0 +1,25 @@
+@import "../../styles/variable.scss";
+
+.contact_form_box {
+    grid-template-columns: repeat(2, 1fr);
+
+    .contact_form_image {
+        background-image: url("../../images/contact_form.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        box-shadow: $box_shadow;
+    }
+
+    @media (max-width:$md_size) {
+        grid-template-columns: repeat(1, 1fr);
+
+        .contact_form_image {
+            display: none
+        }
+    }
+}

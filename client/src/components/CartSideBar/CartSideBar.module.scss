@@ -1,0 +1,37 @@
+@import "../../styles/variable.scss";
+.drawer {
+    width: 50vw !important;
+    position: relative;
+    .close_icon {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        border-color: #fff;
+        & svg {
+            font-size: 30px;
+        }
+    }
+    .cart_items_box{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width:$md_size) {
+        width: 75vw !important;
+        .close_icon {
+            & svg {
+                font-size: 25px;
+            }
+        }
+    }
+    @media (max-width:$sm_size) {
+        width: 100vw !important;
+        .close_icon {
+            top: 0px;
+            & svg {
+                font-size: 22px;
+            }
+        }
+        .cart_items_box{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

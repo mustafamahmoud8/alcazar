@@ -1,0 +1,15 @@
+@import "../../styles/variable.scss";
+
+.filter_and_search_and_sort {
+    padding: 20px 24px;
+    background-color: $white;
+    border-radius: 12px;
+    box-shadow: $box_shadow;
+
+    .search_and_sort {
+        grid-template-columns: 1fr auto;
+        @media (max-width: $md_size) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
