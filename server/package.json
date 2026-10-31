@@ -10,7 +10,7 @@
   },
   "author": "webGhoul",
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "license": "ISC",
   "dependencies": {
